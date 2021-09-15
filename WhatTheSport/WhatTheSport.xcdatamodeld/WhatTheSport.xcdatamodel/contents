@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Filter" representedClassName="Filter" syncable="YES" codeGenerationType="class">
+        <attribute name="allGames" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="allSports" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="filter6" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="followedGames" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="followedSports" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="followedTeams" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Setting" representedClassName="Setting" syncable="YES" codeGenerationType="class">
+        <attribute name="dark" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="postColor" attributeType="String" defaultValueString="Orange"/>
+        <attribute name="push" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES" codeGenerationType="class">
+        <attribute name="userID" attributeType="String"/>
+        <relationship name="filters" maxCount="1" deletionRule="Nullify" destinationEntity="Filter"/>
+        <relationship name="settings" maxCount="1" deletionRule="Nullify" destinationEntity="Setting"/>
+    </entity>
+    <elements>
+        <element name="Filter" positionX="-9" positionY="36" width="128" height="119"/>
+        <element name="Setting" positionX="-9" positionY="36" width="128" height="74"/>
+        <element name="User" positionX="0" positionY="45" width="128" height="74"/>
+    </elements>
+</model>
